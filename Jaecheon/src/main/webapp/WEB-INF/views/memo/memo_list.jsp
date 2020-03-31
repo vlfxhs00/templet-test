@@ -6,23 +6,40 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%@ include file="../include/header.jsp" %>
+<!-- include libraries(bootstrap) -->
+<link
+href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+rel="stylesheet">
+<script src=
+"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<!-- include summernote css/js -->
+<link href="${path}/summernote/summernote.css" 
+rel="stylesheet">
+<script src="${path}/summernote/summernote.js"></script>
+
+
 <script type="text/javascript">
-function memo_view(idx) {
+$(function() {
+	//id가 memo인 태그를 summernote로 변경
+	$("#memo").summernote({
+		height : 150,
+		width : 600
+	});
+});
+
+
+function memo_view(idx){
 	location.href="${path}/memo/view/"+idx;
-	//REST(REpresentativ state Transter)방식, RESTful한 URI방식
+	//REST(REpresentativ State Transfer) 방식, RESTful한 URI방식
 	//게시물로 고유한 주소값을 가짐, 게시물하나가 주소1개이다.
 	//http://localhost/spring02/memo/view/1번게시물
-	//http://localhost/spring02/memo/view/2
-	//따라서 이런방식에서는 스프링에서 @PathVariabl을 적용해야한다.
+	//http://localhost/spring02/memo/view/2 
+	//따라서 이런방식에서는 스프링에서 @PathVariable을 적용해야한다.
 
 	//jsp방식에서는 파라미터가 바뀔뿐이지 주소가 바뀌는것은 아니었다.
 	//http://localhost/spring02/memo/view.do?idx=1
 	//http://localhost/spring02/memo/view.do?idx=2
-
 }
-
-
-
 </script>
 </head>
 <body>
@@ -30,7 +47,9 @@ function memo_view(idx) {
 <h2>메모장</h2>
 <form method="post" action="${path}/memo/insert.do">
 	이름 : <input name="writer" size="10"><br>
-	메모 : <input id="memo" name="memo" size="40">
+	메모 : <!-- <input id="memo" name="memo" size="40"> -->
+	<textarea rows="3" cols="50" name="memo" id="memo"></textarea>
+	
 	<input type="submit" value="확인">
 </form>
 

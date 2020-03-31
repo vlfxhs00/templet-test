@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+ul,li {
+	list-style:none;
+}
+.slide{height:300px;overflow:hidden;position:relative;}
+.slide ul{width:calc(100% * 4);display:flex;transition:1s;}
+.slide li{width:calc(100% / 4);height:300px;}
+.slide li:nth-child(1){background:#ffffb3;}
+.slide li:nth-child(2){background:#faa;}
+.slide li:nth-child(3){background:#afa;}
+.slide li:nth-child(4){background:#aaf;}
+.slide input{display:none;}
+.slide .bullet{position:absolute;bottom:20px;left:0;right:0;text-align:center;z-index:10;}
+.slide .bullet label{width:10px;height:10px;border-radius:10px;border:2px solid #666;display:inline-block;background:#fff;font-size:0;transition:0.5s;cursor:pointer;}
+/* 슬라이드 조작 */
+#pos1:checked ~ ul{margin-left:0;}
+#pos2:checked ~ ul{margin-left:-100%;}
+#pos3:checked ~ ul{margin-left:-200%;}
+#pos4:checked ~ ul{margin-left:-300%;}
+/* bullet 조작 */
+#pos1:checked ~ .bullet label:nth-child(1),
+#pos2:checked ~ .bullet label:nth-child(2),
+#pos3:checked ~ .bullet label:nth-child(3),
+#pos4:checked ~ .bullet label:nth-child(4){background:#666;}
+.main{
+	
+	position:absolute;
+	left:50%; 
+	transform:translateX(-50%);
+	top : 0%;
+}
+.nav {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: #f2f2f2;
+}
+#log{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.container{
+	background:white;
+ 	height: 100vh;
+ 	display: flex;
+ 	position:absolute;
+ 	right : 650px;
+	flex-direction: column;
+ 	flex-wrap: wrap;
+ 	
+}
+img {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.flex {
+	display: flex;
+}
+.contents-wrap {
+	width: 1400px;
+	margin: 0 auto;
+	justify-content: center;
+}
+.hot {
+	width: 1200px;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 50px;
+}
+.hotmain {
+	margin-bottom: 30px;
+}
+.item div:nth-child(1) {
+	width: 600px;
+	height: 440px;
+	margin-right: 150px;
+}
+.item div:nth-child(2) div:nth-child(n+1) {
+	width: 150px;
+	height: 150px;
+	margin-bottom: 40px;	
+}
+.item div:nth-child(2) div:nth-child(n+1) span{
+	position: absolute;
+}
+
+.startup{
+	margin-top: 60px;
+	
+}
+.bottom {
+	margin-top: 30px;
+}
+
+
+.bottom div:nth-child(n) {
+	width: 300px;
+	height: 200px;
+	margin-right: 40px;
+	
+	
+}
+.ct {
+	margin-top: 100px;
+}
+.culture{
+	margin-top: 30px;
+}
+
+.culture div:nth-child(n) {
+	width: 300px;
+	height: 200px;
+	margin-right: 40px;
+}
+.bd {
+	margin-top: 100px;
+}
+.bond{
+	margin-top: 30px;
+}
+
+.bond div:nth-child(n) {
+	width: 300px;
+	height: 200px;
+	margin-right: 40px;
+}
+
+.footermenu {
+	margin-top: 200px;
+}
+
+.footermenu a {
+	margin-right: 30px;
+}
+
+.footerinfo {
+	padding: 50px 0px;
+	
+}
+
+.mainfooter {
+	justify-content:center;
+	margin-top:40px;
+	padding : 40px 0px;
+	display: flex;
+	background-color: black;
+	color: white;
+}
+.mainfooter div:nth-child(n+1) {
+	margin-right: 250px;
+	
+}
+.danger {
+	background: black;
+}

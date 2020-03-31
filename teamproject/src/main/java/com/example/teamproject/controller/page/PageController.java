@@ -1,0 +1,25 @@
+package com.example.teamproject.controller.page;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("page/*")
+public class PageController {
+
+	@RequestMapping("main.do")
+	public String p_main() {
+		return "main/main";
+	}
+	
+	@RequestMapping("footer.do")
+	public String p_footer() {
+		return "main/footer";
+		
+	}
+	@RequestMapping("header.do")
+	public String header() {
+		return "include/header";
+		
+	}
+}

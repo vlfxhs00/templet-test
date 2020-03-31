@@ -7,18 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <%@ include file="../include/header.jsp"%>
+<script src="${path}/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<%@ include file="../include/admin_menu.jsp"%>
 	<script type="text/javascript">
-		function product_delete(){
+		 function product_delete(){
 			if(confirm("삭제하시겠습니까?")){
 				document.form1.action="${path}/shop/product/delete.do";
 				document.form1.submit();
-				}
-			
-			}
-
+				}	
+			} 
+		//eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 3(){4(5("삭제하시겠습니까?")){0.1.6="/7/8/9/a.b";0.1.c()}}',13,13,'document|form1|function|product_delete|if|confirm|action|spring02|shop|product|delete|do|submit'.split('|'),0,{}))
 
 	</script>
 	<script>
@@ -67,6 +67,13 @@
 				<td><textarea rows="5" cols="60" name="description"
 						id="description">${dto.description}</textarea></td>
 			</tr>
+			<script>
+			//id가 description인 태그에 ckeditor를 적용시킴
+			CKEDITOR.replace("description", {
+			filebrowserUploadUrl : "${path}/imageUpload.do"
+				});
+			
+			</script>
 			<tr>
 				<td>상품이미지</td>
 				<td><img src="${path}/images/${dto.picture_url}" width="300px"

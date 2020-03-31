@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%@ include file="../include/header.jsp" %>
+<script src="${path}/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <%@ include file="../include/admin_menu.jsp" %>
@@ -55,6 +56,12 @@ function product_write(){
 		<td>상품설명</td>
 		<td><textarea rows="5" cols="60" 
 			name="description" id="description"></textarea>
+			<script>
+			CKEDITOR.replace("description", {
+			filebrowserUploadUrl : "${path}/imageUpload.do"
+				});
+			
+			</script>
 		</td>
 	</tr>
 	<tr>
@@ -68,7 +75,7 @@ function product_write(){
 			<input type="button" value="등록" 
 				onclick="product_write()">
 			<input type="button" value="목록"
-onclick="location.href='${path}/shop/product/list.do'">
+	onclick="location.href='${path}/shop/product/list.do'">
 		</td>
 	</tr>
 </table>	
