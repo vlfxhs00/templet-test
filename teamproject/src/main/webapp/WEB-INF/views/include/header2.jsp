@@ -11,6 +11,11 @@
 
 </script>
 <style type="text/css">
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
 .navbar {
 	height: 70px;
 	display: flex;
@@ -58,7 +63,7 @@ a{
 }
 
 .invest a:visited {
-	color: #404040;
+	color:  #66a3ff;
 }
 .invest a:active {
 	color: #66a3ff;
@@ -122,54 +127,10 @@ a{
 .navbar input#search:-ms-input-placeholder {  
    color: #65737e;  
 }
-body, html {
-  height: 100%;
-}
 
-* {
-  box-sizing: border-box;
-}
 
-.bg-image {
-  /* The image used */
-  background-image: url("../images/cock.jpg");
 
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
 
-  /* Full height */
-  height: 30%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 30px;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  
-  color: #666666;
-  font-weight: bold;
-  position: absolute;
-  text-align : right;
-  top: 20%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  
-}
-.bg-text img {
-	
-	width: 500px;
-	height: 300px;
-	position : absolute;
-	left: 600px;
-}
 
 /* 버튼 드롭다운 */
 .menu {    
@@ -375,8 +336,7 @@ body, html {
 .logo {
 	width: 80px;
 	height: 80px;
-	padding-right: 10px;
-	
+	padding-right: 10px;	
 }
 .company-name span {
 	font-weight: bold;
@@ -426,6 +386,12 @@ body, html {
   color:#fff;
 }
 
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -467,20 +433,11 @@ body, html {
 		<input class="nav-item" type="search" placeholder="Search" id="search"> 
 		<div class="nav-item"><a href="#">로그인 </a></div>
 		<div class="nav-item"><a href="#">회원가입</a></div>
-		<div class="funding-open-button">
+		 <div class="funding-open-button">
     		<div class="eff-1"></div>
     	<a href="#"> 펀딩오픈 신청하기 </a>
   		</div>
 	</div> 	
  </div>
- 	
-<div class="bg-image"></div>
-	<div class="bg-text">
-  		<h1>최고의 프로젝트</h1>
-  		<p>이런 프로젝트는 어떠세요?</p>
-  		
-</div>
-
-
 </body>
 </html>

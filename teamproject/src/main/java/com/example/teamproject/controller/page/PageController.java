@@ -17,9 +17,10 @@ public class PageController {
 		return "main/footer";
 		
 	}
-	@RequestMapping("header.do")
-	public String header() {
-		return "include/header";
-		
+	
+	@RequestMapping("invest.do")
+	public String p_invest() {
+		return "main/invest";
 	}
+	
 }
