@@ -97,7 +97,7 @@ a{
 }
 .navbar .icon{	
   position: absolute;
-  top: 12px;
+  top: 10px;
   margin-left: 17px;
   margin-top: 17px;
   z-index: 1;
@@ -154,9 +154,9 @@ body, html {
   color: #666666;
   font-weight: bold;
   position: absolute;
-  text-align : right;
+  text-align : center;
   top: 20%;
-  left: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
