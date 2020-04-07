@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%><%@ page session="false"%>
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/include/home_css.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/include/home_css.css">
 <script type="text/javascript">
 $(document).ready(function(){
 	$('.slide').slick({

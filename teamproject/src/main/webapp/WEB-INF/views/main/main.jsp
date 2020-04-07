@@ -74,10 +74,6 @@
     
     .funding-container{
     	position: relative;
-    	margin: 0 auto;
-    	padding-right: env(safe-area-inset-right);
-    	padding-left: env(safe-area-inset-left);
-    	min-height: calc(100vh - 48px);
     }
     
     .newstitle{
@@ -118,6 +114,170 @@
     	height: 74px;
     	box-sizing: border-box;
   	}
+  	.campaingsection-section {
+  		padding-top: 32px;
+  		padding-bottom: 32px;
+  	}
+  	
+  	.campaingsection-sectiontitle{
+  		margin: 0 16px 16px;
+    	line-height: 24px;
+    	letter-spacing: 0;
+    	color: rgba(0,0,0,.87);
+    	font-size: 19px;
+    	font-weight: 700;
+  	}
+  	
+  	.info {
+  		margin-top: 24px;
+    }
+    
+    @media screen and (min-width: 1097px){
+    .securtsummary-summary {
+    	margin-right: 0;
+    	margin-left: 0;
+    	}
+    }
+    
+    .securtsummary-summary li em {
+    	color: #00b2b2;
+    	font-size: 28px;
+    	font-weight: 700;
+    	font-style: normal;
+    } 
+    
+    .securtsummary-summary li em , 
+    .securtsummary-summary li span{
+    	line-height: 36px;
+    }
+    
+    .securtsummary-summary li span ,
+    .securtsummary-summary li strong {
+    	display: block;
+    }
+    
+    .securtsummary-summary li strong {
+    	line-height: 18px;
+    	letter-spacing: 0;
+   		color: #90949c;
+    	font-size: 13px;
+    	font-weight: 400;
+    }
+    
+     .securtsummary-summary {
+     	margin: 0 16px 8px;
+     	overflow: hidden;
+     }
+     
+     .securtsummary-summary ul {
+     	display: block;
+     	margin-left: -32px;
+     }
+     
+     .securtsummary-summary li {
+     	display: block;
+    	float: left;
+    	margin-bottom: 3px;
+    	margin-left: 32px;
+    	line-height: 24px;
+    	color: #1d2129;
+    	font-size: 17px;
+    	font-weight: 700;
+     }
+     
+     .securtsummary-summary ul:after{
+     	display: block;
+     	clear: both;
+     	content: "";
+     }
+     
+     /* 주당가격 */
+     @media screen and (min-width: 1097px) {
+     .securtinfo-securtinfo-info{
+    	margin-right: 0;
+    	margin-left: 0; 
+       }
+    }
+     
+     
+     @media screen and (min-width: 1097px) {
+     .securtinfo-securtinfo-info{
+    	display: grid;
+    	grid-template-columns: repeat(2,1fr);
+    	grid-column-gap: 24px;
+    	grid-row-gap: 0;
+     }    
+    }
+     
+     
+     .securtinfo-securtinfo-info li
+     .securtinfo-securtinfo-lavel {
+     	display: block;
+    	flex: unset;
+   		width: 130px;
+   		color: #1d2129;
+     }
+     
+     .securtinfo-securtinfo-info li {
+     	display: flex;
+   		align-items: center;
+   		border-bottom: 1px solid #f0f2f5;
+   	 	padding: 11px 0;
+  	  	line-height: 20px;
+    	color: #90949c;
+    	font-size: 15px;
+     }
+     
+     .securtinfo-securtinfo-info li span {
+      	flex: 1;
+     }
+     
+     /* loginbox */
+     	@media screen and (min-width: 1097px) {
+     	.securtinfo-securtinfo-loginbox {
+    	display: flex;
+  		position: absolute;
+    	top: 0;
+    	left: 0;
+    	align-items: center;
+    	background: hsla(0,0%,100%,.96);
+    	width: 100%;
+    	height: 100%;
+    	box-sizing: border-box;
+     	
+     	}
+     }
+
+    /* funding-campainmain-container */
+    @media screen and (min-width: 1097px){
+    .funding-campainmain-container{
+   		padding-bottom: 80px;
+    	width: 1000px 	
+    	}
+   }
+    .funding-campainmain-container{
+		position: relative;
+   		margin: 0 auto;
+    	padding-right: env(safe-area-inset-right);
+    	padding-bottom: 50px;
+    	padding-left: env(safe-area-inset-left);
+    	min-height: calc(100vh - 48px);    
+    }
+    
+    /* funding-campainmain-content */
+    
+    .funding-campainmain-content{
+    	padding-top : 48px;
+    }
+    
+    @media screen and (min-width: 1097px){
+    .funding-campainmain-container
+    .funding-campainmain-content {
+    	float: left;
+    	width: 624px;
+    
+    	}
+   } 
     
    
 	footer {width: 100%; height: 100px; background-color: #ffb300;}
@@ -248,7 +408,9 @@
 		<li><a href="#" class="funding-explanation link">뉴스</a></li>
 	</ul>
 	</div>
-	<div class="funding-container campainmain infotab">
+	<div class="funding-campainmain-container">
+	<div class="funding-campainmain-content">
+	<div id="equity-campaign-info" class="funding-container-campainmain infotab">
 	<div class="funding-updatenews">
 	<a href="#" class="funding-updatenewslink">
 		<div class="funding-newstitle">
@@ -260,16 +422,62 @@
 	<section id="securt">
 		<div>
 			<div class="campaingsection-section">
+				<div class="campaingsection-sectiontitle">
+					<p>증권 발행 조건</p>
+				</div>
+			<div class="section-container info">
+				<div class="securtsummary-summary">
+					<ul>
+						<li>
+						<strong>기업가치</strong>
+						<em>약 50억</em>
+						</li>
+						<li>
+						<strong>주식</strong>
+						<span>상환전환우선주</span>
+						</li>
+					</ul>
+				</div>
+			<ul class="securtinfo-securtinfo-info">
+				<li>
+					<span class="securtinfo-securtinfo-lavel">
+						<strong>
+						주당가격
+						</strong>
+					</span>
+					<span>
+						00,000원
+					</span>
+				</li>
+				<li>
+				<span class="securtinfo-securtinfo-lavel">
+						<strong>투자 가능 금액</strong>			
+				</span>
+				<span>
+					최소&nbsp;
+					<span>
+					00,000
+					원
+					</span>
+					&nbsp;(
+					<span>
+					0
+					주
+					</span>
+					)
+					</span>
+				</li>
+			</ul>
 			
-			
-			</div>
-		
-		
-		</div>
-	</section>
+	</div>				
+	</div>			
 	</div>
-	
-	
+	</section>
+		
+		
+	</div>
+	</div>
+	</div>
 		<footer></footer>
 	</div>
 
