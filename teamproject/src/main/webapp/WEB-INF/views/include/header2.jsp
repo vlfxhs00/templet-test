@@ -63,7 +63,7 @@ a{
 }
 
 .invest a:visited {
-	color:  #66a3ff;
+	color:  #404040;
 }
 .invest a:active {
 	color: #66a3ff;

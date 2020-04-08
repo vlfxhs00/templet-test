@@ -9,15 +9,11 @@
 <style type="text/css">
 	body li, body ol, body ul {list-style: none;}
 	*{margin: 0; padding: 0;}
-	#wrap {width: 1200px; margin: 0 auto;}
-	.article {width: 100%; height: 300px;}
-	.article img{width: 500px; height: 250px;}
 	.funding-money{margin-left: 580px;}
 	.funding-money p{ margin-bottom: 4px;}
 	.section {width: 100%; position: relative; margin-bottom: 50px; box-shadow: 0 10px 16px rgba(0,0,0,.06);}
 	.funding-company{display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;}
 	.intro {display: block;}
-	.participation {}
 	.support {position: relative; text-align: left; display: block;}
 	.allinvestros{display: block; position: static; justify-content: space-between; text-align: center; overflow-x: hidden;
 	top: auto; left: auto; height: 170px; border-bottom: 0;} 
@@ -178,7 +174,7 @@
      	display: block;
     	float: left;
     	margin-bottom: 3px;
-    	margin-left: 32px;
+    	margin-left: 35px;
     	line-height: 24px;
     	color: #1d2129;
     	font-size: 17px;
@@ -191,6 +187,22 @@
      	content: "";
      }
      
+    /* funding-campainmain-container */
+    .funding-campainmain-container{
+		position: relative;
+   		margin: 0 auto;
+    	padding-right: env(safe-area-inset-right);
+    	padding-bottom: 50px;
+    	padding-left: env(safe-area-inset-left);
+    	min-height: calc(100vh - 48px);    
+    }
+    
+    @media screen and (min-width: 1097px){
+    .funding-campainmain-container{
+   		padding-bottom: 80px;
+    	width: 1000px; 	
+    	}
+   }
      /* 주당가격 */
      @media screen and (min-width: 1097px) {
      .securtinfo-securtinfo-info{
@@ -231,42 +243,11 @@
      .securtinfo-securtinfo-info li span {
       	flex: 1;
      }
-     
-     /* loginbox */
-     	@media screen and (min-width: 1097px) {
-     	.securtinfo-securtinfo-loginbox {
-    	display: flex;
-  		position: absolute;
-    	top: 0;
-    	left: 0;
-    	align-items: center;
-    	background: hsla(0,0%,100%,.96);
-    	width: 100%;
-    	height: 100%;
-    	box-sizing: border-box;
-     	
-     	}
-     }
 
-    /* funding-campainmain-container */
-    @media screen and (min-width: 1097px){
-    .funding-campainmain-container{
-   		padding-bottom: 80px;
-    	width: 1000px 	
-    	}
-   }
-    .funding-campainmain-container{
-		position: relative;
-   		margin: 0 auto;
-    	padding-right: env(safe-area-inset-right);
-    	padding-bottom: 50px;
-    	padding-left: env(safe-area-inset-left);
-    	min-height: calc(100vh - 48px);    
-    }
-    
     /* funding-campainmain-content */
     
-    .funding-campainmain-content{
+    .funding-campainmain-content
+    .EquityCampaignMain_goods{
     	padding-top : 48px;
     }
     
@@ -278,107 +259,581 @@
     
     	}
    } 
-    
    
-	footer {width: 100%; height: 100px; background-color: #ffb300;}
+   /* company-section */
+   .company-section {
+   		padding-top: 32px;
+   		padding-bottom: 32px;
+   
+   }
+   @media screen and (min-width: 1097px) {
+   .company-section-title {
+   		margin-right: 0;
+   		margin-left: 0;
+    }
+   }
+   .company-section-title {
+   		margin: 0 0px 16px;
+    	line-height: 24px;
+  	    letter-spacing: 0;
+    	color: rgba(0,0,0,.87);
+    	font-size: 19px;
+    	font-weight: 700;
+   }
+   
+   .EquityCampaignEditorSection_container {
+   		position: relative;
+   }
+   
+   .EquityCampaignEditorSection_more .EquityCampaignEditorSection_wrap {
+   		height: auto; 
+   }
+   
+   .EquityCampaignEditorSection_container .EquityCampaignEditorSection_wrap {
+   		position: relative;
+   		overflow: hidden;
+   }
+   
+   @media screen and (min-width: 769px) {
+   .EquityCampaignEditorSection_container .EquityCampaignEditorSection-story {
+   		margin: 0;
+   	
+   	}
+   }
+   
+   .EquityCampaignEditorSection_container .EquityCampaignEditorSection-story {
+   		word-break : break-word;
+   }
+   
+   .EquityCampaignEditorCompany-sotry {
+   		position: relative;
+   		overflow: hidden;
+   		line-height: 28px;
+   		letter-spacing: 0;
+   		font-size: 17px;
+   		font-weight: 300;
+   }
+   
+   .campany-points-story {
+   		background: black;
+   		width: 624px;
+   		height: 500px;
+   
+   }
+   
+   /* aside */
+   @media screen and (min-width: 1097px){
+   .funding-campainmain-container
+   .EquityCampaignMain-goods{
+  	display: flex;
+  	position: sticky;
+  	top: 48px;
+    right: 0;
+    float: right;
+    transition: padding-top .3s;
+    z-index: 99;
+    margin-right: 0;
+    margin-bottom: 132px;
+    margin-left: auto;
+    width: 320px;
+    max-height: calc(100vh - 48px);
+    box-sizing: border-box;
+  	 
+   }
+  }
+  
+  .funding-campainmain-container 
+  .EquityCampaignMain-goodsection{
+  	padding-bottom: 0;
+  }
+  
+  .EquityCampaignMaingoodsection-container {
+  	display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .EquityCampaignMainsection-setion {
+  	padding-top: 32px;
+  }
+  
+  .funding-campainmain-container 
+  .campain-goodsectiontitle {
+  	margin-right: auto;
+  	margin-left: auto;
+  	width: 271px;
+  }
+  
+ .EquityCampaignMaingoodsection-container
+ .EquityCampaignGoodsSection_list {
+ 	position: relative;
+    margin: 0 auto;
+    width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+ } 
+ 
+ .EquityCampaignMaingoodsection-container
+ .EquityCampaignGoodsSection_list
+ .EquityCampaignGoodsSection_card:first-child{
+ 	margin-top: 0;
+ } 
+ 
+ .EquityCampaignMaingoodsection-container
+ .EquityCampaignGoodsSection_list
+ .EquityCampaignGoodsSection_card {
+ 	margin: 24px auto;
+ 	width: 271px;
+ }
+ 
+ .EquityCampaigngoods-goods {
+ 	position: relative;
+    max-width: 320px;
+    text-align: center;
+    box-sizing: border-box;
+ }
+ 
+ .EquityCampaigngoods-goods > button {
+ 	transition-property: border-color;
+    transition-duration: .2s;
+    margin: 0;
+    border: 1px solid #dadce0;
+    box-shadow: 0 20px 16px -10px rgba(0,0,0,.15);
+    background: #fff;
+    cursor: pointer;
+    padding: 24px 24px 16px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-badge {
+ 	display: inline-block;
+    margin: 0 0 12px;
+    background: #90949c;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 20px;
+    letter-spacing: -.2px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-names {
+ 	margin: 12px 0;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: rgba(0,0,0,.87);
+    font-size: 19px;
+    font-weight: 700;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-info {
+ 	display: inline-block;
+    margin-bottom: 16px;
+    border-top: 1px solid rgba(0,0,0,.15);
+    padding-top: 8px;
+    line-height: 18px;
+    color: rgba(0,0,0,.54);
+    font-size: 13px;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-description {
+ 	margin-bottom: 8px;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-description {
+ 	text-align: left;
+    line-height: 18px;
+    color: #7c8288;
+    font-size: 13px;
+    font-weight: 400;
+ }
+ 
+ .EquityCampaigngoods-goods
+ .EquityCampaigngoods-button {
+ 	transition-property: color,background;
+    transition-duration: .2s;
+    border: 1px solid #00c4c4;
+    height: 36px;
+    line-height: 36px;
+    color: #00c4c4;
+    font-size: 15px;
+    font-weight: 400;
+    box-sizing: border-box;
+ }
+ 
+ .EquityCampaigngoodsSection-goodsbottoms {
+ 	position: relative;
+    transition: margin-bottom .5s;
+    margin: 0 4px;
+    box-shadow: inset 0 1px 0 0 #dadce0;
+    padding: 16px 12px;
+    box-sizing: border-box;
+ }
+ 
+ .iy.button.primary, .iy.button.primary-outline {
+ 	background-color: #00c4c4;
+ }
+ 
+ .iy.button.primary {
+ 	background-color: #00c4c4;
+    color: #fff;
+ }
+ 
+ .iy.button.primary, .iy.button.fluid {
+ 	width: 100%;
+ 	text-align: center;
+ }
+ 
+ .iy.button.large {
+ 	padding: 0 32px;
+ 	height: 56px;
+ 	line-height: 54px;
+ 	font-size: 21px;
+ }
+ 
+ .iy.button.no-radius {
+ 	border-radius: 0;
+ }
+ 
+ .funding-campainmain-container
+ .EquityCampaigmain-paymentbutton {
+ 	float: none;
+ }
+ 
+ .iy.button {
+ 	transition-property: background-color,border-color,color,opacity;
+    transition-duration: .2s;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 1;
+    color: rgba(0,0,0,.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: .07em;
+    text-decoration: none;
+ }
+ 
+ /* EquityCampaignAppWrapper_container */
+ .EquityCampaignAppWrapper_container {
+ 	position: relative;
+ }
+ 
+ .EquityCampaignHeader-header {
+ 	position: relative;
+ 	margin-bottom: 32px;
+ 	box-shadow: 0 10px 16px rgba(0,0,0,.06);
+ }
+ .EquityCampaignHeader-header > div.EquityCampaignHeader-header-bg{
+ 	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+ }  
+ 
+ @media screen and (min-width : 1097px){
+ .EquityCampaignHeader-header > div.EquityCampaignHeader-header-bg{
+ 	height: 224px;
+ 	}
+ }
+ 
+  .EquityCampaignHeader-header > div.EquityCampaignHeader-header-bg:before {
+  	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clear: both;
+    z-index: 2;
+    margin-bottom: 0;
+    background: linear-gradient(0deg,rgba(0,0,0,.1),rgba(0,0,0,.5));
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+  
+   @media screen and (min-width : 1097px){
+   .EquityCampaignHeader-header
+   .EquityCampaignHeader-wrap{
+   	z-index: 50;
+   	padding-top: 92px;
+   }
+   
+   .EquityCampaignHeader-header
+   .EquityCampaignHeader-wrap {
+   	padding-top: 72px;
+   }
+   
+   .EquityCampaignHeader-header > div {
+   	position: relative;
+   	z-index: 5;
+   }
+   
+   .EquityCampaignWrapper-wrapper {
+   	position: relative;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1000px;
+    box-sizing: content-box;
+   }
+   
+   @media screen and (min-width: 1097px) {
+   .EquityCampaignHeader-header
+   .EquityCampaignHeader-badge {
+   	top : 48px;
+   } 
+  }
+  
+   .EquityCampaignHeader-header
+   .EquityCampaignHeader-badge {
+   	position: absolute;
+    top: 24px;
+    left: 16px;
+    left: calc(16px + env(safe-area-inset-left));
+   }
+   
+   .EquityCampaignSecurtBadge-container {
+   	display: block;
+    background: #fff;
+    padding: 0 8px;
+    line-height: 24px;
+    color: rgba(0,0,0,.54);
+    font-size: 13px;
+    font-weight: 400;
+   }
+   
+   .EquityCampaignSecurtBadge-container > em {
+   	display: block;
+    float: left;
+    margin-right: 8px;
+    margin-left: -8px;
+    background: #00c4c4;
+    padding: 0 8px;
+    color: #fff;
+    font-weight: 500;
+    font-style: normal;
+   }
+  
+  @media screen and (min-width: 1097px) {  
+ .EquityCampaignHeader-header
+ .EquityCampaignWrapper-textbox{
+ 	margin-bottom: 40px;
+    padding-left: 580px;
+    height: 132px;
+  }
+ }
+ 
+ .EquityCampaignHeader-header
+ .EquityCampaignWrapper-textbox{
+ 	height: 227px;
+ }
+ 
+ @media screen and (min-width: 1097px) { 
+ p.EquityCampaignHeaderTitle-title{
+ 	margin-right: 0;
+    margin-left: 0;
+    min-height: 76px;
+    max-height: 94px;
+    line-height: 36px;
+    letter-spacing: 0;
+    font-size: 28px;
+ 
+  }
+ }
+ 
+ p.EquityCampaignHeaderTitle-title{
+ 	display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0 16px 4px calc(16px + env(safe-area-inset-left));
+    min-height: 56px;
+    max-height: 78px;
+    overflow: hidden;
+    line-height: 28px;
+    word-break: break-all;
+    -webkit-box-pack: end;
+    letter-spacing: -.3px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+ }
+ 
+ 
+	@media screen and (min-width: 1097px){
+	.EquityCampaignHeaderMainCard-container {
+	top: 127px;
+    width: 520px;
+    height: 292px;
+	}
+}
+
+	.EquityCampaignHeaderMainCard-container {
+	position: absolute;
+    top: 174px;
+    left: 16px;
+    left: calc(16px + env(safe-area-inset-left));
+    width: 160px;
+    height: 90px;
+}
+
+	@media screen and (min-width: 1097px){ 
+	.EquityCampaignHeaderMainCard-box {
+	width: 520px;
+    height: 292.5px;
+	}
+}
 	
-	/* 화면 너비 0 ~ 1200px */
-	@media (max-width: 1220px){
-		#wrap {width : 100%;}
-		.section > div {width: 23%;}
-		.section > div:nth-child(5n) {display: none;} 
+	.EquityCampaignHeaderMainCard-box {
+	display: flex;
+    position: relative;
+    align-items: flex-end;
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    background: #000;
+    width: 160px;
+    height: 90px;
 	}
-		/* 화면 너비 0 ~ 768px */
-	@media (max-width: 768px){
-		.section > div {width: 31.3333%;}
-		.section > div:nth-child(5) {display: block;} 	 
+	
+	.EquityCampaignVideoEmbed-container, .EquityCampaignVideoEmbed-player {
+	position: relative;
+    width: 100%;
+    height: 100%;
 	}
-		/* 화면 너비 0 ~ 428px */
-	@media (max-width: 768px){
-		.section > div {width: 48%;}
-		.section > div:nth-child(5n) {display: block;} 
-		 
+	
+	.EquityCampaignVideoEmbed-box {
+	position: relative;
+    background: #000;
+    padding-top: 56.25%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+
+	.EquityCampaignVideoEmbed-boximg ,
+	.EquityCampaignVideoEmbed-boximg:before,
+	.EquityCampaignVideoEmbed-player {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 	}
+	
+	.EquityCampaignVideoEmbed-boximg {
+	background: no-repeat 50%/cover;
+    background-size: 103% auto;
+	}
+	
+	.EquityCampaignVideoEmbed-boximg:before {
+	background: rgba(0,0,0,.06);
+    content: "";	
+	}
+	
+	@media screen and (min-width: 1097px){
+	.EquityCampaignVideoEmbed-boxplay{
+	width: 56px;
+    height: 56px;	
+	}
+}
+	.EquityCampaignVideoEmbed-boxplay{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgba(0,0,0,.54);
+    cursor: pointer;
+    width: 44px;
+    height: 44px;	
+	}
+	
+	@media screen and (min-width: 1097px){
+	.EquityCampaignVideoEmbed-boxplay:before{
+	margin-top: -11px;
+    margin-left: -6px;
+    border-width: 12px 18px;
+	}
+}
+	.EquityCampaignVideoEmbed-boxplay:before{
+	display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -5px;
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    border-width: 9px 14px;
+    width: 0;
+    height: 0;
+    content: "";	
+	}
+ 
+	footer {width: 100%; height: 100px; background-color: #ffb300;}
+
 </style>
 </head>
 <body>
-<%@include file="../include/header.jsp" %>
-		<div id="wrap">
-		<div class="article">
-			<div>
-				<img alt="" src="../images/blue.jpg" align="left">
-			</div>
-			<div class="funding-money">	
-					<p>
-					<span><strong>00,000,000원 달성</strong>목표금액 00,000,000원 0%</span>
-					<p>
-					<span>00일 남음YYYY.MM.DD 15:00 마감</span>
-					<p>
-					<button>지금 투자하기</button><button>좋아요</button>
-					</p>
-					
-						
-			</div>
-		</div>
-		<hr>
-		
-		<div class="section">
-			<!-- 기업소개 -->
-			<div class="funding-company">
-				<div class="funding-company intro">
-				<p>
-				(주)마로산업테크
-				</p>
-				<p>
-				연구개발특구진흥재단 파트너와 함께합니다.
-				</p>
-				#로봇 #물류로봇 #아마존
+<%@include file="../include/header2.jsp" %>
+<main>
+	<div id="equity-detail"></div>
+		<div class="EquityCampaignAppWrapper_container">
+			<div class="EquityCampaignHeader-header">
+				<div class="EquityCampaignHeader-header-bg">
+					<div style="background-image: url('../images/blue.jpg');">
+					</div>
 				</div>
-			<div class="funding-company participation">
-			 <div class="funding-company participation support">
-				<p>
-				128명이 확산에 참여중입니다.
-				</p>
-				<p>
-				와디즈 지지서명을 통해 메이커의 멋진 이야기가
-				</p>
-				<p>
-				세상에 알려질 수 있도록 페이스북에 공유해주세요.
-				</p>
-				참여시 최대 1,100포인트를 적립해 드립니다.
-				<button>지지서명하기</button>
-			 </div>	
+				<div class="EquityCampaignWrapper-wrapper EquityCampaignHeader-wrap">
+					<div class="EquityCampaignSecurtBadge-container EquityCampaignHeader-badge">
+						<em>주식</em>
+						"상황전환우선주"
+					</div>
+					<div class="EquityCampaignWrapper-textbox">
+						<p class="EquityCampaignHeaderTitle-title">???? | ???? | ???? | ????</p>
+					</div>
+					<div class="EquityCampaignHeaderMainCard-container">
+						<div class="EquityCampaignHeaderMainCard-box">
+							<div class="EquityCampaignVideoEmbed-container">
+								<div class="EquityCampaignVideoEmbed-player">
+									<div class="EquityCampaignVideoEmbed-box EquityCampaignVideoEmbed-playing">
+										<div class="EquityCampaignVideoEmbed-boximg" style="background-image: url()">
+										</div>
+										<button type="button" class="EquityCampaignVideoEmbed-boxplay">
+										</button>
+										<div class="EquityCampaignVideoEmbed-boxtime">
+										
+										</div>
+									</div>							
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
 			</div>
-		  </div>
-		<hr>
-		  <!-- 투자자현황,매력도평가  -->
-		<div class="funding-company allinvestros">
-		  <div class="funding-company investorstatus">
-		  	<p>
-		  	매력도 평가?
-		  	</p>
-		  	<p>
-		  	250개
-		  	</p>
-		  	<p>
-		  	★4.0
-		  	매력도 평점
-		  	</p>
-		  </div>
-		  <div class="funding-company investorstatus">
-		  <p>
-		   투자자 현황
-		  </p>
-		  100명
-		  </div>
-		  <div class="funding-company investorstatus">
-		  <p>
-		  투자에는 이프유 계좌가 필수!
-		  </p>
-		 <a href="#"> 이프유 계좌 개설 방법 보러가기 -> </a>
-		  </div>
 		</div>
-	</div>
+</main>
 	<div class="funding-lisk">
 	<strong>!투자 위험 고지</strong> <span>상장기업 투자는 원금 손실의 가능성이 크니 투자 위험 안내를 꼭 확인하세요.</span>
 	</div>
@@ -424,7 +879,6 @@
 			<div class="campaingsection-section">
 				<div class="campaingsection-sectiontitle">
 					<p>증권 발행 조건</p>
-				</div>
 			<div class="section-container info">
 				<div class="securtsummary-summary">
 					<ul>
@@ -456,30 +910,301 @@
 				<span>
 					최소&nbsp;
 					<span>
-					00,000
-					원
+					00,000원
 					</span>
-					&nbsp;(
-					<span>
-					0
-					주
-					</span>
-					)
+					(0주)
 					</span>
 				</li>
 			</ul>
 			
-	</div>				
-	</div>			
+			</div>			
+		</div>
 	</div>
+</div>				
 	</section>
-		
-		
+	<section id="company">
+		<div class="company-section">
+			<div class="company-section-title">
+				<p>기업소개</p>
+			</div>
+			<div class="EquityCampaignEditorSection_container EquityCampaignEditorSection_more">
+				<div class="EquityCampaignEditorSection_wrap">
+					<div class="EquityCampaignEditorSection-story EquityCampaignEditorCompany-sotry">
+										<div>2014년 크리스마스 저녁 뉴스에서 방영된 아마존의 kiva 시스템을 보고 우리가 가지고있는
+											기술로 충분히 개발할수있다는 생각으로 그동안 해오던 교육용로봇사업을 같이 일하던 직원에게 무상으로 사업권을
+											넘기고 물류로봇사업을 시작하였습니다. 개발 자금이 없어 국책 과제를 신청하여 15년 개발 시작하였고 16년
+											프로토타입의 QR code를 인식하는 물류로봇을 개발하였고 16년 상용화 할수있는 물류로봇 으로 발전시켜
+											17년 완성된 물류로봇을 개발하였고 명실상부한 로봇의 위치인식 핵심역량인 카메라 비전 기술과 모션제어기술을
+											이용한 무인이동체 전문기업으로 발전하였으며, 물류이송로봇과 주차로봇을 연구개발 상용화한 벤처기업으로 물류이송
+											로봇의 total solution을 지향하는 기업으로 성장 하였습니다. 개발된 제품을 상용화하여 다수의
+											납품실적을 보유하고 있고 연구개발 과 마케팅이 조화를 이룬 물류로봇 전문기업입니다. 2021년 까지 세계
+											최고의 물류이송로봇 전문기업으로 성장 하고자 합니다.
+											</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>		
+	<section id="attraction">
+		<div>
+		<div class="company-section">
+			<div class="company-section-title">
+				<p>핵심포인트</p>
+			</div>
+			<div class="campany-points-story">
+			
+			</div>
+		</div>
+		</div>	
+	</section>
+		<section id="attraction">
+		<div>
+		<div class="company-section">
+			<div class="company-section-title">
+				<p>비즈니스 전략</p>
+			</div>
+			<div class="campany-points-story">
+			
+			</div>
+		</div>
+		</div>
+	</section>
+			<section id="attraction">
+		<div>
+		<div class="company-section">
+			<div class="company-section-title">
+				<p>상세내용</p>
+			</div>
+			<div class="campany-points-story">
+			
+			</div>
+		</div>
+		</div>
+	</section>
 	</div>
 	</div>
+	<aside class="EquityCampaignMain-goods">
+		<div class="EquityCampaignMainsection-setion EquityCampaignMaingoodsection-container EquityCampaignMain-goodsection">
+			<div class="company-section-title campain-goodsectiontitle">
+				<p>투자조건</p>
+			</div>
+			<div class="EquityCampaignGoodsSection_list">
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+				<div class="EquityCampaignGoodsSection_card">
+					<div class="EquityCampaigngoods-goods">
+						<button type="button">
+							<p class="EquityCampaigngoods-badge">
+							???주 이상 투자 시
+							</p>
+							<p class="EquityCampaigngoods-names">[W9] ???만원 이상 투자
+							</p>
+							<div class="EquityCampaigngoods-info">
+							<p>제한없음</p>
+							</div>
+							<div class="EquityCampaigngoods-description">
+							<p>00만 원 상당 백화점 상품권</p>
+							<p></p>
+							<p></p>
+							<p>*본 투자 조건을 선택하신 비W9회원은 W9투자자혜택 적용이 어렵습니다.
+							</p>
+							</div>
+							<div class="EquityCampaigngoods-button">이 조건으로 투자하기
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="EquityCampaigngoodsSection-goodsbottoms">
+				<button type="button" class="iy button block no-radius large primary EquityCampaigbutton-paymentbutton EquityCampaigmain-paymentbutton">
+					지금 투자하기
+				</button>
+			</div>
+			
+		</div>
+	</aside>
 	</div>
-		<footer></footer>
-	</div>
-
 </body>
 </html>
