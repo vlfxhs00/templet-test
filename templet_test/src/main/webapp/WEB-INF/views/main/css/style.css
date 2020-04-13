@@ -86,10 +86,12 @@ a {
   .site-section.site-section-sm {
     padding: 4em 0; }
 
-.site-section-heading {
-  font-size: 30px;
+.site-section-heading{ 
   color: #25262a;
-  position: relative; }
+  position: relative; 
+}
+ 
+  
   .site-section-heading:before {
     content: "";
     left: 0%;
@@ -112,6 +114,8 @@ a {
 
 .border-top {
   border-top: 1px solid #edf0f5 !important; }
+
+
 
 .site-footer {
   padding: 4em 0; }
@@ -954,3 +958,6 @@ a {
 
 .height-auto {
   height: auto !important; }
+  
+  
+

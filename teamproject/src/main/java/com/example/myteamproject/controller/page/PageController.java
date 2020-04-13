@@ -1,4 +1,4 @@
-package com.example.teamproject.controller.page;
+package com.example.myteamproject.controller.page;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

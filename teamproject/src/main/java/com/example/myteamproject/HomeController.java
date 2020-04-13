@@ -1,5 +1,4 @@
-package com.example.teamproject;
-
+package com.example.myteamproject;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -34,7 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "main/index";
+		return "main/home";
 	}
 	
 }
