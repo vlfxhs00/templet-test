@@ -26,4 +26,9 @@ public class PagemoveController {
 	public String p_shopsingle() {
 		return "main/shop-single";
 	}
+	
+	@RequestMapping("login.do")
+	public String p_login() {
+		return "main/login";
+	}
 }

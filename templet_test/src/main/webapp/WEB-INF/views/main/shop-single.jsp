@@ -46,8 +46,189 @@ section .section-title {
     border-top-right-radius: .25rem;
     color: #000000;
     font-size: 20px;
-}	
-    </style>
+}
+
+.table-td-second {
+	font-weight: bold;
+	color: #595959;
+}
+
+.search-table{
+    padding: 10%;
+    margin-top: -6%;
+}
+
+.company-name {
+	margin-bottom: 30px;
+	color: #1a1a1a;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.projectinfo-state {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.message-error {
+ 	background-color: rgba(255,128,128,.05);
+ 	font-size: 13px;
+ 	margin: 12px auto;
+ 	padding: 16px;
+}
+
+.message-error > p {
+	margin-bottom: 0;
+	color: #f66;
+}
+
+.EquityBoard-root {
+	position: relative;
+    text-align: left;
+    line-height: 24px;
+    color: rgba(0,0,0,.87);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.EquityBoard-root .EquityBoard-main .EquityBoard-title {
+	margin-bottom: 24px;
+    line-height: 24px;
+    color: rgba(0,0,0,.87);
+    font-size: 19px;
+    font-weight: 700;
+}
+.EquityBoard-root .EquityBoard-main .EquityBoard-title .EquityBoard-totalCount {
+	margin-left: 4px;
+    color: #00a2a2;
+}
+
+.iy.button {
+	transition-property: background-color,border-color,color,opacity;
+    transition-duration: .2s;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 1;
+    color: rgba(0,0,0,.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: .07em;
+    text-decoration: none;
+}
+
+.iy.button.gray {
+	background-color: #90949c;
+    color: #fff;
+}
+
+.EquityBoard-root 
+.EquityBoard-main
+.EquityBoard-writeButton {
+	min-width: 100%;
+	text-align: center;
+	
+}
+
+
+@media screen and (min-width: 769px) {
+	.EquityBoard-root 
+	.EquityBoard-main
+	.EquityBoard-writeButton {
+		min-width: 343px;
+	}
+}
+
+.EquityBoard-root
+.EquityBoard-listUtils {
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+.EquityBoard-root
+.EquityBoard-listUtilsRight {
+	position: absolute;
+	left: 500px;
+}
+
+.EquityBoard-root
+.EquityBoard-listUtils
+.EquityBoard-selectBox {
+	margin-left: 20px;
+}
+
+.SortingSelect-container {
+	display: inline-block;
+    position: relative;
+    line-height: 24px;
+    color: rgba(0,0,0,.87);
+    font-size: 15px;
+}
+
+.SortingSelect-container
+.SortingSelect-select {
+	position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+.EquityBoard-root
+.EquityBoard-item {
+	position: relative;
+    z-index: 1;
+    padding: 16px 0;
+}
+
+.EquityBoard-root
+.EquityBoard-list.EquityBoard-itemWrap > .EquityBoard-item,
+.EquityBoard-root.EquityBoard-list.EquityBoard-itemWrap > .EquityBoard-item.EquityBoard-item > button {
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.06);
+}
+
+.EquityBoard-root
+.EquityBoard-itemInfo {
+	margin-bottom: 8px;
+    line-height: 24px;
+    color: #90949c;
+    font-size: 12px;
+}
+
+.EquityBoard-root
+.EquityBoard-itemInfoRight {
+	
+	
+	left: 600px;
+    z-index: 10;
+}
+
+.EquityBoard-root
+.EquityBoard-itemContents {
+
+	
+	margin-bottom: 4px;
+    overflow: hidden;
+    line-height: 24px;
+    word-break: break-all;
+    color: rgba(0,0,0,.87);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+</style>
   </head>
   <body>
   
@@ -101,7 +282,7 @@ section .section-title {
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
+            <a href="<%=request.getContextPath()%>/page/login.do" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
             <a href="cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
@@ -165,13 +346,31 @@ section .section-title {
             </div>
 
             </div>
-            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">지금 투자하기</a></p>
-
+            <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">지금 투자하기</a>
+				<button>좋아요</button>
+			</p>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="container projectinfo-state">
+    	<div class="row justify-content-center">
+    		<div class="col-md-4">
+    				<p>(제목)</p>
+    					글
+    		</div>
+    		<div class="col-md-4">
+    				<p>(제목)</p>
+    					글
+    		</div>
+    		<div class="col-md-4">
+    			<a href="#">
+    				<p>투자에는 이프유 계좌가 필수!</p>
+					이프유 계좌 개설 방법 보기
+    			</a>
+    		</div>
+    	</div>
+    </div>
     <div class="site-section block-3 site-blocks-2">
       <div class="container">
         <div class="row justify-content-center">
@@ -200,7 +399,7 @@ section .section-title {
 		<div class="col-sm-2" style="color: #1d2129;">주당 가격</div>
 		<div class="col-sm-2">00,000원</div>
 		<div class="col-sm-2" style="color: #1d2129;">투자 가능 금액</div>
-		<div class="col-sm-2">최소 000,000원(0주)</div>
+		<div class="col-sm-2">최소 000,000원(0주)</div> 
 	</div>
     </div>
     </div>
@@ -208,10 +407,11 @@ section .section-title {
 <section id="tabs">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 ">
+			<div class="col-sm-12 ">
 				<nav>
 					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">기업소개</a>
+						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">프로젝트 소개</a>
+						<a class="nav-item nav-link" id="nav-intro-tab" data-toggle="tab" href="#nav-intro" role="tab" aria-controls="nav-intro" aria-selected="false">기업소개</a>
 						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">투자위험</a>
 						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">게시판</a>
 						<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">투자자</a>
@@ -220,14 +420,55 @@ section .section-title {
 				<div class="tab-content py-3 px-3 px-sm-3" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 						2014년 크리스마스 저녁 뉴스에서 방영된 아마존의 kiva 시스템을 보고 우리가 가지고있는 기술로 충분히 개발할수있다는 생각으로 그동안 해오던 교육용로봇사업을 같이 일하던 직원에게 무상으로 사업권을 넘기고 물류로봇사업을 시작하였습니다. 개발 자금이 없어 국책 과제를 신청하여 15년 개발 시작하였고 16년 프로토타입의 QR code를 인식하는 물류로봇을 개발하였고 16년 상용화 할수있는 물류로봇 으로 발전시켜 17년 완성된 물류로봇을 개발하였고 명실상부한 로봇의 위치인식 핵심역량인 카메라 비전 기술과 모션제어기술을 이용한 무인이동체 전문기업으로 발전하였으며, 물류이송로봇과 주차로봇을 연구개발 상용화한 벤처기업으로 물류이송 로봇의 total solution을 지향하는 기업으로 성장 하였습니다. 개발된 제품을 상용화하여 다수의 납품실적을 보유하고 있고 연구개발 과 마케팅이 조화를 이룬 물류로봇 전문기업입니다. 2021년 까지 세계 최고의 물류이송로봇 전문기업으로 성장 하고자 합니다.					</div>
+	<div class="tab-pane fade" id="nav-intro" role="tabpanel" aria-labelledby="nav-intro-tab">
+		<div class="container search-table">
+			<h1 class="company-name">기업이름</h1>
+                <table class="table" id="myTable">
+                    <tbody>
+                    <tr>
+                        <td>업종</td>
+                        <td class="table-td-second">커머스/마케팅 / 제조/유통</td>
+                    </tr>
+                    <tr>
+                        <td>설립일</td>
+                        <td class="table-td-second">2019.12.17</td>
+                    </tr>
+                    <tr>
+                        <td>대표자</td>
+                        <td class="table-td-second">이재천</td>
+                    </tr>
+                    <tr>
+                        <td>임·직원수</td>
+                        <td class="table-td-second">10명</td>
+                    </tr>
+                    <tr>
+                        <td>소재지</td>
+                        <td class="table-td-second">[14558] 경기 부천시 조마루로385번길 80</td>
+                    </tr>
+                    <tr>
+                        <td>홈페이지</td>
+                        <td class="table-td-second">www.ifyou.co.kr</td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td class="table-td-second">dlwocjs789@naver.com</td>
+                    </tr>
+                    <tr>
+                        <td>SNS</td>
+                        <td class="table-td-second"></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+	</div>
 					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 						<p>투자 위험 안내</p>
 						<p>와디즈에서 진행되는 금융투자상품에 대한 투자는 아래와 같은 투자 위험을 가지고 있습니다.</p>
 						<p>원금손실의 위험이 있습니다.</p>
-						모든 투자는 원금손실의 위험을 가지고 있습니다. 
+						<p>모든 투자는 원금손실의 위험을 가지고 있습니다. 
 						때문에 투자 시 한 곳에만 투자하지 아니하고 다양한 상품에 분산하여 투자하실 것을 권유 드립니다. 
 						와디즈는 온라인소액투자중개업자로 증권 모집을 중개하는 업을 영위하고 있으며, 원금손실에 대한 책임을 지지 않습니다. 
-						모든 투자는 투자자 본인의 의사에 따라 결정되어야 합니다.
+						모든 투자는 투자자 본인의 의사에 따라 결정되어야 합니다.</p>
 						<p>환금성이 낮습니다.</p> 
 						비상장기업에 대한 투자는 환금성이 낮습니다.
 						와디즈의 중개를 통해 모집된 증권은 6개월간 전매가 제한되며, 매매가 가능한 시점이 되더라도 현금으로의 전환이 보장되지는 않습니다. 
@@ -242,7 +483,60 @@ section .section-title {
 						유상증자로 인하여 투자자가 보유한 지분율은 감소될 수 있습니다.
 					</div>
 					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+						<div class="message-error">
+							<p>피드백 게시판에서 교환되는 의견은 참고자료일 뿐, 이곳에서 논의되는 내용 자체가 손실보전이나 원금보장을 담보하지 않습니다.</p> 
+							<p>투자설명서가 피드백 내용보다 우선하므로, 반드시 핵심정보와 투자설명서를 바탕으로 투자 의사결정을 내리시기 바랍니다.</p> 
+							<p>와디즈에서 발행되는 모든 증권에는 원금손실의 위험이 있음에 유의하시기 바랍니다.</p>
+						</div>
+						<div class="EquityBoard-root">
+							<div class="EquityBoard-main">
+								<div class="EquityBoard-title">
+									의견<span class="EquityBoard-totalCount">1</span>
+								</div>
+							<button class="iy button gray EquityBoard-writeButton">작성하기</button>	
+							<div class="EquityBoard-list EquityBoard-listBlock">
+								<div class="EquityBoard-listUtils">
+									<div class="EquityBoard-listUtilsRight">
+										<div class="SortingSelect-container EquityBoard-selectBox">
+											전체 <i class="fa fa-angle-down"></i>
+											<select name="feedbackType" class="SortingSelect-select">
+												<option value="all">전체</option>
+												<option value="D">토론</option>
+												<option value="Q">Q&A</option>
+											</select>
+										</div>
+										<div class="SortingSelect-container EquityBoard-selectBox">
+											최신순 <i class="fa fa-angle-down"></i>
+											<select name="feedbackType" class="SortingSelect-select">
+												<option value="recent">최신순</option>
+												<option value="popular">인기순</option>
+												<option value="old">과거순</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="EquityBoard-itemWrap">
+									<div class="EquityBoard-item">
+										<div class="EquityBoard-itemInfo">
+											<div class="EquityBoard-itemInfoRight">
+												<div class="EquityBoard-itemDate">
+													11시간전
+												</div>
+											</div>
+										</div>
+										<div class="EquityBoard-itemContents EquityBoard-itemContentsQuestion">
+											<span>Q.</span>실링기 구매	
+										</div>
+										<div class="EquityBoard-itemBottom">
+											<div class="EquityBoard-userInfo">
+											
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
 						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
