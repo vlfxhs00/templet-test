@@ -82,151 +82,66 @@ section .section-title {
 	color: #f66;
 }
 
-.EquityBoard-root {
-	position: relative;
-    text-align: left;
-    line-height: 24px;
-    color: rgba(0,0,0,.87);
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.EquityBoard-root .EquityBoard-main .EquityBoard-title {
+.EquityBoard-title {
 	margin-bottom: 24px;
     line-height: 24px;
     color: rgba(0,0,0,.87);
     font-size: 19px;
     font-weight: 700;
 }
-.EquityBoard-root .EquityBoard-main .EquityBoard-title .EquityBoard-totalCount {
-	margin-left: 4px;
-    color: #00a2a2;
-}
 
-.iy.button {
+.iy-button {
+	min-width: 343px;
+	background-color: #90949c;
+    color: #fff;
+	border-color: #90949c;
+	height: 48px;
+	text-decoration: none;
 	transition-property: background-color,border-color,color,opacity;
     transition-duration: .2s;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 3px;
-    background-color: #fff;
-    cursor: pointer;
-    padding: 0 1.41176em;
-    height: 48px;
-    vertical-align: middle;
-    line-height: 1;
-    color: rgba(0,0,0,.54);
-    font-size: 17px;
-    font-weight: 400;
-    box-sizing: border-box!important;
-    -webkit-appearance: none;
-    display: inline-block;
-    padding-top: .07em;
-    text-decoration: none;
 }
 
-.iy.button.gray {
-	background-color: #90949c;
-    color: #fff;
+.EquityBoard-selectbox {
+	margin-left: 18px;
+	margin-top: 30px;
 }
 
-.EquityBoard-root 
-.EquityBoard-main
-.EquityBoard-writeButton {
-	min-width: 100%;
-	text-align: center;
-	
-}
-
-
-@media screen and (min-width: 769px) {
-	.EquityBoard-root 
-	.EquityBoard-main
-	.EquityBoard-writeButton {
-		min-width: 343px;
-	}
-}
-
-.EquityBoard-root
-.EquityBoard-listUtils {
-	margin-top: 24px;
-	margin-bottom: 12px;
-}
-
-.EquityBoard-root
-.EquityBoard-listUtilsRight {
-	position: absolute;
-	left: 500px;
-}
-
-.EquityBoard-root
-.EquityBoard-listUtils
-.EquityBoard-selectBox {
-	margin-left: 20px;
-}
-
-.SortingSelect-container {
-	display: inline-block;
-    position: relative;
-    line-height: 24px;
-    color: rgba(0,0,0,.87);
-    font-size: 15px;
-}
-
-.SortingSelect-container
-.SortingSelect-select {
-	position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    line-height: 24px;
-    font-size: 15px;
-}
-
-.EquityBoard-root
-.EquityBoard-item {
-	position: relative;
-    z-index: 1;
-    padding: 16px 0;
-}
-
-.EquityBoard-root
-.EquityBoard-list.EquityBoard-itemWrap > .EquityBoard-item,
-.EquityBoard-root.EquityBoard-list.EquityBoard-itemWrap > .EquityBoard-item.EquityBoard-item > button {
-	box-shadow: inset 0 -1px 0 rgba(0,0,0,.06);
-}
-
-.EquityBoard-root
-.EquityBoard-itemInfo {
-	margin-bottom: 8px;
-    line-height: 24px;
-    color: #90949c;
-    font-size: 12px;
-}
-
-.EquityBoard-root
 .EquityBoard-itemInfoRight {
-	
-	
-	left: 600px;
-    z-index: 10;
+	margin-left: 270px;
+	margin-top: 30px;
 }
 
-.EquityBoard-root
-.EquityBoard-itemContents {
-
-	
-	margin-bottom: 4px;
-    overflow: hidden;
-    line-height: 24px;
-    word-break: break-all;
+.EquityBoard-itemBoardContents{
+	margin-top : 10px;
     color: rgba(0,0,0,.87);
     font-size: 17px;
     font-weight: 500;
 }
 
+.EquityBoard-userInfo {
+	margin-top: 20px;
+}
+
+.like {
+	margin-left: 210px;
+}
+
+.fa-thumbs-up {
+	margin-right: 10px;
+	font-size: 13px;
+}
+
+.fa-thumbs-down {
+	margin-right: 10px;
+	font-size: 13px;
+}
+
+.user {
+	color: #404040;
+	font-size: 15px;
+}
 
 </style>
   </head>
@@ -488,61 +403,45 @@ section .section-title {
 							<p>투자설명서가 피드백 내용보다 우선하므로, 반드시 핵심정보와 투자설명서를 바탕으로 투자 의사결정을 내리시기 바랍니다.</p> 
 							<p>와디즈에서 발행되는 모든 증권에는 원금손실의 위험이 있음에 유의하시기 바랍니다.</p>
 						</div>
-						<div class="EquityBoard-root">
-							<div class="EquityBoard-main">
-								<div class="EquityBoard-title">
-									의견<span class="EquityBoard-totalCount">1</span>
-								</div>
-							<button class="iy button gray EquityBoard-writeButton">작성하기</button>	
-							<div class="EquityBoard-list EquityBoard-listBlock">
-								<div class="EquityBoard-listUtils">
-									<div class="EquityBoard-listUtilsRight">
-										<div class="SortingSelect-container EquityBoard-selectBox">
-											전체 <i class="fa fa-angle-down"></i>
-											<select name="feedbackType" class="SortingSelect-select">
-												<option value="all">전체</option>
-												<option value="D">토론</option>
-												<option value="Q">Q&A</option>
-											</select>
-										</div>
-										<div class="SortingSelect-container EquityBoard-selectBox">
-											최신순 <i class="fa fa-angle-down"></i>
-											<select name="feedbackType" class="SortingSelect-select">
-												<option value="recent">최신순</option>
-												<option value="popular">인기순</option>
-												<option value="old">과거순</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="EquityBoard-itemWrap">
-									<div class="EquityBoard-item">
-										<div class="EquityBoard-itemInfo">
-											<div class="EquityBoard-itemInfoRight">
-												<div class="EquityBoard-itemDate">
-													11시간전
-												</div>
-											</div>
-										</div>
-										<div class="EquityBoard-itemContents EquityBoard-itemContentsQuestion">
-											<span>Q.</span>실링기 구매	
-										</div>
-										<div class="EquityBoard-itemBottom">
-											<div class="EquityBoard-userInfo">
-											
-											</div>
-										</div>
-									</div>
-								</div>
+						<div class="row">
+							<div class="col-sm-12 EquityBoard-title">
+								<div>의견 1</div>
 							</div>
+							<div class="col-sm-12"><button class="iy-button">
+							작성하기</button>
+							</div>	
+							<div class="col-xs-2 EquityBoard-selectbox">
+								<select name="feedbackType" >
+									<option value="all">전체</option>
+									<option value="D">토론</option>
+									<option value="Q">Q&A</option>
+								</select>
+								</div>
+							
+								<div class="col-xs-2 EquityBoard-selectbox">
+								<select name="feedbackType" >
+									<option value="recent">최신순</option>
+									<option value="popular">인기순</option>
+									<option value="old">과거순</option>
+								</select>
 							</div>
+							<div class="col-sm-12 EquityBoard-itemInfoRight">
+								2020.04.01							
+							</div>
+							<div class="col-sm-12 EquityBoard-itemBoardContents">
+								그동안 지켜본 그린의 모습을 믿고 응원합니다.						
+							</div>
+							<div class="col-sm-12 EquityBoard-userInfo">
+								<span class="user">이재천</span>	<span class="like"><i class="fa fa-thumbs-up"></i> <i class="fa fa-thumbs-down"></i></span><span class="answer">댓글</span>						
+							</div>
+							
 						</div>
 					</div>
+						
 					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
 						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
 					</div>
 				</div>
-			
 			</div>
 		</div>
 	</div>

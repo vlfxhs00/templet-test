@@ -31,4 +31,19 @@ public class PagemoveController {
 	public String p_login() {
 		return "main/login";
 	}
+	
+	@RequestMapping("join.do")
+	public String p_join() {
+		return "main/join";
+	}
+	
+	@RequestMapping("join2.do")
+	public String p_join2() {
+		return "main/join2";
+	}
+	
+	@RequestMapping("email.do")
+	public String p_email() {
+		return "main/email";
+	}
 }

@@ -7,7 +7,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
 <link rel="stylesheet" href="${path}/fonts/icomoon/style.css">
 <link rel="stylesheet" href="${path}/css/bootstrap.min.css">
