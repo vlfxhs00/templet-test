@@ -34,13 +34,13 @@
 }
 #logreg-forms .form-control:focus { z-index: 2; }
 #logreg-forms .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    margin-bottom: 15px;
+    border-bottom-right-radius: 1;
+    border-bottom-left-radius: 1;
 }
 #logreg-forms .form-signin input[type="password"] {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 1;
+    border-top-right-radius: 1;
 }
 
 #logreg-forms .social-login{
@@ -78,7 +78,7 @@
 }
 
 .submit{
-  background: -webkit-linear-gradient(0deg,  #2dfbff 0%, #3c96ff 100%);
+  background: -webkit-linear-gradient(#e6e6e6 50%, #e6e6e6 100%);
   border-radius: 25px;
   color: #fff;
 }
@@ -118,6 +118,7 @@
     }
 
 }
+
 </style>
 
 </head>
@@ -127,8 +128,7 @@
     <div id="logreg-forms">
         <form class="form-signin">
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">로그인</h1>
-          
-            <div class="input-group">
+				<div class="input-group">
               <input type="email" id="inputEmail" class="form-control" placeholder="아이디" required="" autofocus="">
             </div>
 
@@ -137,10 +137,10 @@
             </div>
 
             <div class="input-group">
-              <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fas fa-sign-in-alt"></i>로그인</button>
+              <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fa fa-sign-in-alt"></i>로그인</button>
             </div>
             <div class="input-group mt-3" style="text-align: center;">
-            	<a href="#">아이디</a> / <a href="#">비밀번호 찾기</a>
+            	<a href="${path}/page/idfind.do">아이디</a> / <a href="#">비밀번호 찾기</a>
             </div>
             <hr>
             <!-- <p>Don't have an account!</p>  -->

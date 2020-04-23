@@ -46,4 +46,14 @@ public class PagemoveController {
 	public String p_email() {
 		return "main/email";
 	}
+	
+	@RequestMapping("idfind.do")
+	public String p_idfind() {
+		return "main/idfind";
+	}
+	
+	@RequestMapping("mypage.do")
+	public String p_mypage() {
+		return "main/mypage";
+	}
 }

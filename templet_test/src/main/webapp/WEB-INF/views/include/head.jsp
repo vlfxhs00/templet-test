@@ -41,6 +41,7 @@ pageEncoding="UTF-8"%>
                 <li><a href="${path}/page/shop.do">게시판</a></li>
                 <li><a href="${path}/page/contact.do">문의하기</a></li>
                 <li><a href="${path}/page/join.do">회원가입</a></li>
+                <li><a href="${path}/page/mypage.do">내정보</a></li>
               </ul>
             </nav>
           </div>
