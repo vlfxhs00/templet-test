@@ -34,15 +34,17 @@
 
 .findid-text {
 	width: 400px;
-	height: 45px;
+	height: 50px;
 }
 
 .btn-findid {
 	width: 400px;
-	height: 45px;	
+	height: 50px;	
 }
 
-
+.email-check > input {
+	padding: 0 .94118em;
+}
 </style>
 </head>
 <body>
@@ -70,7 +72,7 @@
 		</div>
 	</div>
 	<div class="mt-5">
-       <div class="row justify-content-center">
+       <div class="row justify-content-center email-check">
           <input type="text" placeholder="이메일 계정" id="email" name="email" class="findid-text">
         </div>
     </div>

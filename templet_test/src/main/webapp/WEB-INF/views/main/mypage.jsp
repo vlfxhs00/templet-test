@@ -90,11 +90,12 @@
 		  		<div class="col-sm" style="border-right: 1px solid #cccccc;">
 		  			<p class="tier">등급</p>
 		  			<p><span class="second-tier">브론즈</span></p>
-		  			<button class="btn-tier-up">등급상향 요청</button>
+		  			<a href="#" class="btn-tier-up">등급상향 요청</a>
 		  		</div>
 		  		<div class="col-sm" style="border-right: 1px solid #cccccc;">
 		  			<p class="tier">쿠폰</p>
-		  			<span class="second-tier">1장</span>
+		  			<p><span class="second-tier">0</span></p>
+		  			<a href="${path}/page/coupon.do" class="btn-tier-up">내 쿠폰</a>
 		  		</div>
 		  		<div class="col-sm">
 		  			<p class="tier"><i class="fa fa-heart"></i></p>

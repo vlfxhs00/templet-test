@@ -56,4 +56,14 @@ public class PagemoveController {
 	public String p_mypage() {
 		return "main/mypage";
 	}
+	
+	@RequestMapping("coupon.do")
+	public String p_coupon() {
+		return "main/coupon";
+	}
+	
+	@RequestMapping("couponzone.do")
+	public String p_couponzone() {
+		return "main/coupon-zone";
+	}
 }
