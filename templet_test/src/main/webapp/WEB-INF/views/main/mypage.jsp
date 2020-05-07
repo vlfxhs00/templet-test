@@ -106,12 +106,12 @@
 		  </div>
 		  <div class="row align-items-center mt-5">
             <div class="col">
-              <span class="none-Enrollment">아직 <strong>계좌등록</strong>을 안하셨나요?</span><a href="#" class="Enrollment"> <i class="fa fa-angle-right"></i> 지금당장하기</a>
+              <span class="none-Enrollment">아직 <strong>계좌등록</strong>을 안하셨나요?</span><a href="${path}/page/account.do" class="Enrollment"> <i class="fa fa-angle-right"></i> 지금당장하기</a>
             </div>
           </div>
           <div class="row align-items-center mt-5 mb-4">
             <div class="col">
-              <span class="none-Enrollment">아직 <strong>회사등록</strong>을 안하셨나요?</span><a href="#" class="Enrollment"> <i class="fa fa-angle-right"></i> 지금당장하기</a>
+              <span class="none-Enrollment">아직 <strong>회사등록</strong>을 안하셨나요?</span><a href="${path}/page/companyinformation.do" class="Enrollment"> <i class="fa fa-angle-right"></i> 지금당장하기</a>
             </div>
           </div>
           <div class="row align-items-center">

@@ -66,4 +66,29 @@ public class PagemoveController {
 	public String p_couponzone() {
 		return "main/coupon-zone";
 	}
+	
+	@RequestMapping("account.do")
+	public String p_account() {
+		return "main/account";
+	}
+	
+	@RequestMapping("accountcomplete.do")
+	public String p_accountcomplete() {
+		return "main/account-complete";
+	}
+	
+	@RequestMapping("companyinformation.do")
+	public String p_companyinformation() {
+		return "main/company_information";
+	}
+	
+	@RequestMapping("companycomplete.do")
+	public String p_companycomplete() {
+		return "main/company_complete";
+	}
+	
+	@RequestMapping("mypageaccountcomplete.do")
+	public String p_mypageaccountcomplete() {
+		return "main/mypage_accountcomplete";
+	}
 }

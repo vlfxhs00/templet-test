@@ -79,7 +79,7 @@
 			<a href="#" class="my-coupon">나의 쿠폰</a>
 		</div>
 		<div class="col-sm-2">
-			<a href="${path}/page/couponzone.do">쿠폰존 <span>3</span></a>
+			<a href="${path}/page/couponzone.do">쿠폰존 <span>4</span></a>
 		</div>
 	</div>
 	<div class="row mt-5">
